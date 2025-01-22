@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Learning Part 2</title>
+</head>
+<body style="background-color: black;color: white;">
+    <div class="week">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+        <div class="day">Sunday</div>
+    </div>
+</body>
+<script>
+     const week = document.querySelector('.week');
+    // console.log(week.children);
+    for (let i = 0; i < week.children.length; i++) {
+        // console.log(week.children[i].innerHTML);
+    }
+// console.log(week.firstElementChild);        
+
+// console.log("Nodes : ",week.childNodes);
+
+// **************************
+
+const div = document.createElement('div');
+console.log(div);   
+div.className = "main";
+
+const text = document.createTextNode('Hello World');
+div.appendChild(text);
+
+document.body.appendChild(div);
+
+div.id = Math.random();
+
+</script>
+</html>

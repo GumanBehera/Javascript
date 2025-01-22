@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom learning part 3</title>
+</head>
+<body style = "background-color: black; color: white">
+    <ul class = 'languages'>
+        <li>Javascript</li>
+
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;
+        document.querySelector('.languages').appendChild(li);
+    }
+    addLanguage('Python');
+
+    function OptiaddLanguage (langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.languages').appendChild(li)
+    }
+OptiaddLanguage('java')
+
+
+    const replaceItem = document.querySelector('li:nth-child(2)');
+    const newli = document.createElement('li')
+    newli.textContent = 'C++';
+    replaceItem.replaceWith(newli)
+
+    const firstLang = document.querySelector('li:first-child');
+    firstLang.outerHTML = '<li>Typescript</li>'
+
+    const lastlang = document.querySelector('li:last-child');
+    lastlang.remove()
+
+</script>
+</html>
